@@ -9,10 +9,10 @@ while ($val = $action->fetch()){
 if(!empty($_GET['e'])){
     $e=$_GET['e'];
     if ($e == 0) $txt = "merci de votre participation";
-    else if ($e == 1) $txt = "merci de remplir toute les case marqué par un *";
-    else if ($e == 2) $txt = "nous ne conaissont pas votre numeros etudiant, merci de le verifier. si le probleme perssiste SMS au 07.84.01.37.52 (Paul G.)";
-    else if ($e == 3) $txt = "votre participation à deja ete enregistrer";
-    else if ($e == 4) $txt = "erreur inconue, veuiller retenter ou SMS au 07.84.01.37.52 (Paul G.) ";
+    else if ($e == 1) $txt = "merci de remplir toutes les cases marquées par un *";
+    else if ($e == 2) $txt = "Nous ne connaissons pas votre numéro étudiant, merci de le vérifier, si le problème persiste SMS au 07.84.01.37.52 (Paul G.)";
+    else if ($e == 3) $txt = "Votre participation a déjà été enregistrée";
+    else if ($e == 4) $txt = "Erreur inconnue, veuillez retenter ou SMS au 07.84.01.37.52 (Paul G.) ";
 }
 ?>
 <!DOCTYPE html>
@@ -25,8 +25,8 @@ if(!empty($_GET['e'])){
 <body>
     <div id="enTete">
         <h1>Nous demandons la fin de BBB</h1>
-        <p class = "ET">BBB ne fonctionne pas et nous perdons du temps, affin de nous permetre de travailler dans de bonne condition, nous demandons de mettre fin à l'utilisation de BBB</p>
-        <p class = "ET">cette petition à été signée par : <?php echo $nbr ?> perssones</p>
+        <p class = "ET">BBB ne fonctionne pas et nous perdons du temps, afin de nous permetre de travailler dans de bonnes conditions, nous demandons de mettre fin à l'utilisation de BBB</p>
+        <p class = "ET">cette pétition à été signée par : <?php echo $nbr ?> personnes</p>
     </div>
     <div id="form">
         <?php if (!empty($txt)){?>
@@ -38,7 +38,7 @@ if(!empty($_GET['e'])){
                 <input type="text" id="nom" name="nom" required>
             </div>
             <div>
-                <label for="name">Numero etudiant * (ce Numero seras crypter et perssones n'y auras acces il valide juste votre participation):</label>
+                <label for="name">Numero étudiant * (ce numéro sera crypté et personne n'y aura accès il valide juste votre participation):</label>
                 <input type="text" id="num" name="num" required>
             </div>
             <div>
@@ -51,8 +51,8 @@ if(!empty($_GET['e'])){
         </form>
     </div>
     <div>
-        <h2>Dernierre Expression : <?php echo $lastsend_msg; ?></h2>
+        <h2>Dernière expression : <?php echo $lastsend_msg; ?></h2>
     </div>
-    <p id="cr">Code source disponible : <a href="https://github.com/ppgg88/bbb">githhub.com</a></p>
+    <p id="cr">Code source disponible : <a href="https://github.com/ppgg88/bbb">github.com</a></p>
 </body>
 </html>
