@@ -1,6 +1,6 @@
 <?php
 $nbr = 0;
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=bbb;charset=utf8', 'admin', '*****');
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=bbb;charset=utf8', 'admin', 'pass');
 $action = $bdd->query('SELECT * FROM signatures');
 while ($val = $action->fetch()){
     $nbr++;
