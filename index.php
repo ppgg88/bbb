@@ -4,7 +4,10 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=bbb;charset=utf8', 'admin', '***');
 $action = $bdd->query('SELECT * FROM signatures');
 while ($val = $action->fetch()){
     $nbr++;
-    $lastsend_msg = $val['express'];
+    if (strlen($val['express']) > 2){
+        $lastsend_msg = $val['express'];
+
+    }
 }
 if(!empty($_GET['e'])){
     $e=$_GET['e'];
