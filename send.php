@@ -1,5 +1,5 @@
 <?php 
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=bbb;charset=utf8', 'admin', 'pass');
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=bbb;charset=utf8', 'admin', '*******');
 if(!empty($_POST['nom']) AND !empty($_POST['num'])){
 
     $nom = htmlspecialchars($_POST['nom']);
