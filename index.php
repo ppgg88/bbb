@@ -1,6 +1,6 @@
 <?php
 $nbr = 0;
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=bbb;charset=utf8', 'admin', 'pass');
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=bbb;charset=utf8', 'admin', '***');
 $action = $bdd->query('SELECT * FROM signatures');
 while ($val = $action->fetch()){
     $nbr++;
@@ -25,8 +25,8 @@ if(!empty($_GET['e'])){
 <body>
     <div id="enTete">
         <h1>Nous demandons la fin de BBB</h1>
-        <p class = "ET">BBB ne fonctionne pas et nous perdons du temps, afin de nous permetre de travailler dans de bonnes conditions, nous demandons de mettre fin à l'utilisation de BBB</p>
-        <p class = "ET">cette pétition à été signée par : <?php echo $nbr ?> personnes</p>
+        <p class = "ET">BBB ne fonctionne pas et nous perdons du temps, afin de nous permettre de travailler dans de bonnes conditions, nous demandons de mettre fin à l'utilisation de BBB</p>
+        <p class = "ET">Cette pétition à été signée par : <?php echo $nbr ?> personnes</p>
     </div>
     <div id="form">
         <?php if (!empty($txt)){?>
@@ -34,11 +34,11 @@ if(!empty($_GET['e'])){
         <?php } ?>
         <form  action="send.php" method="POST">
             <div>
-                <label for="name">Nom Prenom * :</label>
+                <label for="name">Nom Prénom * :</label>
                 <input type="text" id="nom" name="nom" required>
             </div>
             <div>
-                <label for="name">Numero étudiant * (ce numéro sera crypté et personne n'y aura accès il valide juste votre participation):</label>
+                <label for="name">Numéro étudiant * (ce numéro sera crypté et personne n'y aura accès il valide juste votre participation):</label>
                 <input type="text" id="num" name="num" required>
             </div>
             <div>
@@ -46,7 +46,7 @@ if(!empty($_GET['e'])){
                 <textarea id="msg" name="msg"></textarea>
             </div>
             <div class="button">
-                <button type="submit">signé !</button>
+                <button type="submit">Signé !</button>
             </div>
         </form>
     </div>

@@ -1,9 +1,9 @@
 <?php 
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=bbb;charset=utf8', 'admin', 'pass');
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=bbb;charset=utf8', 'admin', '***');
 if(!empty($_POST['nom']) AND !empty($_POST['num'])){
-
     $nom = htmlspecialchars($_POST['nom']);
-    $num = htmlspecialchars($_POST['num']);
+    $msg=$_POST['nom'];
+    $num = $_POST['num'];
     $msg = '';
     if (!empty($_POST['msg'])){
         $msg = htmlspecialchars($_POST['msg']);
@@ -16,7 +16,7 @@ if(!empty($_POST['nom']) AND !empty($_POST['num'])){
         $req = $bdd->prepare("SELECT * FROM signatures WHERE netu = ?");
         $req->execute(array($num));
         $user = $req->rowCount();
-        if($user==0){
+        if($user==0 && strlen($_POST['num'])==8){
             $insert = $bdd->prepare("INSERT INTO signatures(nom, netu, express) VALUES(?, ?, ?)");
             if ($insert->execute(array($nom, $num, $msg))){
                 $erreur = 0;  //tout est OK
