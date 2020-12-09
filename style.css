@@ -1,0 +1,43 @@
+body{
+    margin: 0px;
+    height: 100vh;
+    background-color: gainsboro;
+}
+#enTete{
+    text-align: center;
+    background-color: powderblue;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+h1{
+    margin : 0px;
+    font-size: 5vh;
+}
+h2{
+    margin-left: 7vw;
+    margin-right: 7vw;
+    font-size: 4vh
+}
+.ET{
+    font-size: 3vh;
+    margin:3vh;
+}
+label{
+    display: block;
+}
+#form{
+    padding-left: 20vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: deepskyblue;
+}
+#info{
+    color: red;
+}
+#cr{
+    position: fixed;
+    right: 0;
+    bottom: 50%;
+    width: 8em;
+    margin-bottom: -2.5em;
+}
