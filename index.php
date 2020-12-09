@@ -53,6 +53,6 @@ if(!empty($_GET['e'])){
     <div>
         <h2>Dernierre Expression : <?php echo $lastsend_msg; ?></h2>
     </div>
-    <p id="cr">Code source disponible : <a href="https://github.fr">githhub.fr</a></p>
+    <p id="cr">Code source disponible : <a href="https://github.com/ppgg88/bbb">githhub.com</a></p>
 </body>
 </html>

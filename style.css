@@ -37,7 +37,7 @@ label{
 #cr{
     position: fixed;
     right: 0;
-    bottom: 50%;
-    width: 8em;
+    bottom: 10%;
+    width: 25vw;
     margin-bottom: -2.5em;
 }
